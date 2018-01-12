@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+using asp_core_angular.Persistence;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +24,8 @@ namespace asp_core_angular
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<VDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Default")));
+
             services.AddMvc();
         }
 
