@@ -11,9 +11,10 @@ using System;
 namespace asp_core_angular.Migrations
 {
     [DbContext(typeof(VDBContext))]
-    partial class VDBContextModelSnapshot : ModelSnapshot
+    [Migration("20180112074753_ApplyContrains")]
+    partial class ApplyContrains
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
